@@ -56,9 +56,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: |
-            askanade18/homework9-fastapi:latest
-            askanade18/homework9-fastapi:${{ github.sha }}
+          tags: askanade18/homework9-fastapi:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
           cache-from: type=registry,ref=askanade18/homework9-fastapi:latest
           cache-to: type=inline,mode=max
