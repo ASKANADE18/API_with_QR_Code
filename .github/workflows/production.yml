@@ -69,4 +69,9 @@ jobs:
           exit-code: '1'
           ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
+
+     - name: Check if secrets exist (debug)
+       run: |
+         echo "DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME != '' }}"
+         echo "DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN != '' }}"
           
